@@ -1,14 +1,12 @@
 'use server';
 
-import success from '@/app/success';
-
 const ContactForm = async () => {
 	return (
 		<form
 			name='contact'
 			method='POST'
 			data-netlify='true'
-			action={success}>
+			action='/success'>
 			<input
 				type='hidden'
 				name='form-name'
