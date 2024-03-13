@@ -4,7 +4,7 @@ export default function ContactForm() {
 			name='contact'
 			method='POST'
 			data-netlify='true'
-			action='/success.jsx'>
+			action='app/success.jsx'>
 			<input
 				type='hidden'
 				name='form-name'
