@@ -1,6 +1,8 @@
+'use server';
+
 import success from '@/app/success';
 
-export default function ContactForm() {
+const ContactForm = async () => {
 	return (
 		<form
 			name='contact'
@@ -44,4 +46,6 @@ export default function ContactForm() {
 			</p>
 		</form>
 	);
-}
+};
+
+export default ContactForm;
