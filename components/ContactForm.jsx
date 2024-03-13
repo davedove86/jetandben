@@ -1,10 +1,12 @@
+import success from '@/app/success';
+
 export default function ContactForm() {
 	return (
 		<form
 			name='contact'
 			method='POST'
 			data-netlify='true'
-			action='app/success.jsx'>
+			action={success}>
 			<input
 				type='hidden'
 				name='form-name'
