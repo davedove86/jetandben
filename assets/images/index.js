@@ -4,8 +4,11 @@ import close from './close.svg';
 import heroImage from './clairejetben.jpg';
 import weDoImage from './clairejetben-2.jpg';
 import schoolsIcon from './schools-icon.svg';
-import pawIcon from './paw-icon.svg';
 import communityIcon from './community-icon.svg';
+import pawIcon from './paw-icon.svg';
+import schoolBadge from './school-badge.svg';
+import communityEvents from './community-events.svg';
+import officerSupport from './officer-support.svg';
 import banner2 from './banner/banner-2.jpg';
 import banner3 from './banner/banner-3.jpg';
 import banner4 from './banner/banner-4.jpg';
@@ -25,6 +28,9 @@ export {
 	schoolsIcon,
 	pawIcon,
 	communityIcon,
+	schoolBadge,
+	communityEvents,
+	officerSupport,
 	banner2,
 	banner3,
 	banner4,

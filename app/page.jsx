@@ -5,6 +5,9 @@ import {
 	communityIcon,
 	schoolsIcon,
 	weDoImage,
+	officerSupport,
+	communityEvents,
+	schoolBadge,
 } from '@/assets/images';
 import Link from 'next/link';
 import ImageBanner from '@/components/ImageBanner';
@@ -55,7 +58,7 @@ const HomePage = () => {
 			</header>
 
 			<section className={`bg-grey-bg w-full overflow-hidden`}>
-				<div className='container mx-auto p-10'>
+				<div className='container mx-auto px-10 py-20'>
 					<div className='block lg:flex justify-between gap-4'>
 						<div className='bg-white p-8 shadow-md rounded-md lg:mb-0 mb-4 flex flex-col'>
 							<Image
@@ -115,16 +118,61 @@ const HomePage = () => {
 			<ImageBanner />
 
 			<section className={`w-full overflow-hidden`}>
-				<div className='container mx-auto p-10'>
-					<div className='block py-10 lg:py-0 md:flex w-full gap-[40px]'>
-						<div className='flex flex-col justify-center items-start pb-10 md:w-1/2'>
+				<div className='container mx-auto px-10 py-20'>
+					<div className='block py-10 lg:py-0 lg:flex w-full gap-[40px]'>
+						<div className='flex flex-col justify-center items-start pb-10 lg:w-1/2'>
 							<h2 className='text-3xl font-bold mb-5'>What We Do</h2>
 							<p className='mb-8 text-gray-800 max-w-[500px]'>
 								We have various roles within Durham Constabulary and if you
 								would like to know more please contact us.
 							</p>
+							<div className='flex gap-4 mb-8 items-start'>
+								<Image
+									src={schoolBadge}
+									alt='School Badge'
+									height={100}
+								/>
+								<div className='flex flex-col'>
+									<h3 className='text-2xl font-bold mb-5'>School Visits</h3>
+									<p>
+										Are you a Primary School teacher or Early years provider,
+										then we can visit you & deliver topics including Personal
+										Safety, internet safety and people who help us.
+									</p>
+								</div>
+							</div>
+							<div className='flex gap-4 mb-8 items-start'>
+								<Image
+									src={communityEvents}
+									alt='School Badge'
+									height={100}
+								/>
+								<div className='flex flex-col'>
+									<h3 className='text-2xl font-bold mb-5'>Community Events</h3>
+									<p>
+										Organising a local event, then consider Jet & Ben as a fun &
+										informative addition to your event. Scouts, Brownies, Cubs
+										or out of school groups, we’ll attend them all.
+									</p>
+								</div>
+							</div>
+							<div className='flex gap-4 mb-8 items-start'>
+								<Image
+									src={officerSupport}
+									alt='School Badge'
+									height={100}
+								/>
+								<div className='flex flex-col'>
+									<h3 className='text-2xl font-bold mb-5'>Officer Support</h3>
+									<p>
+										Police officers & staff do a demanding and sometimes
+										dangerous job, and are frequently exposed to trauma, we come
+										in to support and listen to the officers.
+									</p>
+								</div>
+							</div>
 						</div>
-						<div className='md:w-1/2'>
+						<div className='lg:w-1/2'>
 							<Image
 								src={weDoImage}
 								alt='Jet and Ben'
