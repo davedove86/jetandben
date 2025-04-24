@@ -24,28 +24,99 @@
   </div>
 </section>
 
-<section class="bg-[#f2f2f2]">
+<section class="section">
   <div class="container">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-white shadow-md rounded-lg p-4">
-        <img src="/school-icon.svg" alt="Graduation hat icon" class="h-25">
-        <h2 class="text-3xl font-bold my-6">Schools</h2>
-        <p class="text-gray-700 my-6">Jet & Ben would like to help all schools and early years providers to keep children safe.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="/school-icon.svg" alt="school hat icon" class="icon">
+        <h2 class="title">Schools</h2>
+        <p class="description">Jet & Ben would like to help all schools and early years providers to keep children safe.</p>
+        <a href="/about" class="learn-more">Learn More</a>
       </div>
-      <div class="bg-white shadow-md rounded-lg p-4">
-        <img src="/community-icon.svg" alt="group of people icon" class="h-25">
-        <h2 class="text-3xl font-bold my-6">Community</h2>
-        <p class="text-gray-700 my-6">We attend a range of organised events, visiting day centres, care homes or out of school groups.</p>
-      </div>
-      <div class="bg-white shadow-md rounded-lg p-4">
-        <img src="/about-us-icon.svg" alt="Dog paw icon" class="h-25">
-        <h2 class="text-3xl font-bold my-6">About Us</h2>
-        <p class="text-gray-700 my-6">If you would like to know more about us; who we are and what we do, then this section has it all for you.</p>
-      </div>
-  </div>
 
+      <div class="card">
+        <img src="/community-icon.svg" alt="Group of people icon" class="icon">
+        <h2 class="title">Community</h2>
+        <p class="description">We attend a range of organised events, visiting day centres, care homes or out of school groups.</p>
+        <a href="/community" class="learn-more">Learn More</a>
+      </div>
+
+      <div class="card">
+        <img src="/about-us-icon.svg" alt="Dog paw icon" class="icon">
+        <h2 class="title">About Us</h2>
+        <p class="description">If you would like to know more about us; who we are and what we do, then this section has it all for you.</p>
+        <a href="/about" class="learn-more">Learn More</a>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 <ImageBanner />
 
 <BookUsCta />
+
+<style>
+  /* General Section Styles */
+.section {
+  background-color: #f2f2f2;
+  padding: 4rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.icon {
+  width: 75px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+}
+
+/* Learn More Link */
+.learn-more {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.learn-more:hover {
+  transform: scale(1.2); /* Larger scale effect */
+  color: #1a4f8b; /* Darker blue color */
+}
+
+
+</style>

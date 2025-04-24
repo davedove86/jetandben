@@ -10,12 +10,15 @@
   </button>
 
   <nav class:open={isMenuOpen}>
-    <ul>
-      {#each ['Home', 'Schools', 'Community', 'About', 'Contact'] as item}
-        <li><a href={`/${item.toLowerCase()}`} on:click={() => (isMenuOpen = false)}>{item}</a></li>
-      {/each}
-    </ul>
-  </nav>
+  <ul>
+    <li style="animation-delay: 0.1s;"><a href="/" on:click={() => isMenuOpen = false}>Home</a></li>
+    <li style="animation-delay: 0.2s;"><a href="/schools" on:click={() => isMenuOpen = false}>Schools</a></li>
+    <li style="animation-delay: 0.3s;"><a href="/community" on:click={() => isMenuOpen = false}>Community</a></li>
+    <li style="animation-delay: 0.4s;"><a href="/about" on:click={() => isMenuOpen = false}>About</a></li>
+    <li style="animation-delay: 0.5s;"><a href="/contact" on:click={() => isMenuOpen = false}>Contact</a></li>
+  </ul>
+</nav>
+
 </header>
 
 <style>
@@ -88,8 +91,26 @@
 
     nav ul { flex-direction: column; }
 
-    nav li { padding: 1rem; text-align: left; }
+    nav li { padding: 1rem; text-align: center; font-weight: 600; }
 
     .burger-menu { display: flex; }
   }
+
+  @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  nav.open ul li {
+    opacity: 0;
+    animation: fadeInUp 0.4s ease forwards;
+  }
+}
 </style>
