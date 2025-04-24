@@ -1,5 +1,8 @@
 <script>
 	import Hero from '$lib/Hero.svelte';
+  import Faq from '$lib/Faq.svelte';
+  import Faqs from '$lib/faq'; // Assuming this file exports an array of FAQ objects
+	import ContactUsCta from '$lib/ContactUsCta.svelte';
 </script>
 
 <svelte:head>
@@ -13,7 +16,27 @@
 </svelte:head>
 
 <section>
-  <Hero
-    title="About"
-    kicker="If you would like to know more about us; who we are and what we do, then this section has all the information you will need, if you love cute dogs, this is the section for you." />
+  <div class="container">
+    <Hero
+      title="About"
+      kicker="If you would like to know more about us; who we are and what we do, then this section has all the information you will need, if you love cute dogs, this is the section for you." />
+  </div>
 </section>
+
+<section>
+  <div class="container">
+    {#each Faqs as faq}
+      <Faq>
+        <span slot="head">{faq.question}</span>
+        <div slot="details">
+          <p>{faq.answer}</p>
+        </div>
+      </Faq>
+    {/each}
+  </div>
+</section>
+
+<ContactUsCta />
+
+
+

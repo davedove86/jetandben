@@ -2,6 +2,10 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+/* body {
+  @apply flex flex-col min-h-screen;
+} */
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -10,4 +14,12 @@
 
 section {
   padding: 3rem 0;
+}
+
+.btn {
+  @apply bg-[#231f1e] text-white py-4 px-6 rounded;
+}
+
+footer {
+  margin-top: auto;
 }

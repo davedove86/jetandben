@@ -13,7 +13,10 @@
 </svelte:head>
 
 <section>
-  <Hero
-    title="Schools"
-    kicker="Jet & Ben would like to help all schools and early years providers within County Durham and Darlington to educate children especially when it comes to their safety. Find out more below about the lessons we can provide to you." />
+  <div class="container">
+
+    <Hero
+      title="Schools"
+      kicker="Jet & Ben would like to help all schools and early years providers within County Durham and Darlington to educate children especially when it comes to their safety. Find out more below about the lessons we can provide to you." />
+  </div>
 </section>

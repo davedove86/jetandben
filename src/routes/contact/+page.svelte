@@ -1,5 +1,6 @@
 <script>
 	import Hero from '$lib/Hero.svelte';
+	import ImageBanner from '$lib/ImageBanner.svelte';
 </script>
 
 <svelte:head>
@@ -13,7 +14,11 @@
 </svelte:head>
 
 <section>
-  <Hero
-    title="Contact Us"
-    kicker="If you would like us to come and visit your school or community event please use our contact options to get in touch and let's have some fun." />
+  <div class="container">
+    <Hero
+      title="Contact Us"
+      kicker="If you would like us to come and visit your school or community event please use our contact options to get in touch and let's have some fun." />
+  </div>
 </section>
+
+<ImageBanner />

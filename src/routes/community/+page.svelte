@@ -13,7 +13,9 @@
 </svelte:head>
 
 <section>
-  <Hero
-    title="Community"
-    kicker="Jet & Ben maintain many links within the local community, attending organised events, visiting day centres, care homes or out of school groups. If you run a local community group find out more here." />
+  <div class="container">
+    <Hero
+      title="Community"
+      kicker="Jet & Ben maintain many links within the local community, attending organised events, visiting day centres, care homes or out of school groups. If you run a local community group find out more here." />
+  </div>
 </section>
