@@ -3,26 +3,33 @@
 </script>
 
 <header>
-  <a href="/"><img src="../jetandben-logo.svg" alt="Jet & Ben Logo" /></a>
+  <div class="header-container">
 
-  <button class="burger-menu" class:open={isMenuOpen} on:click={() => (isMenuOpen = !isMenuOpen)} aria-label="Toggle navigation">
-    <span></span><span></span><span></span>
-  </button>
+    <a href="/"><img src="../jetandben-logo.svg" alt="Jet & Ben Logo" /></a>
 
-  <nav class:open={isMenuOpen}>
-  <ul>
-    <li style="animation-delay: 0.1s;"><a href="/" on:click={() => isMenuOpen = false}>Home</a></li>
-    <li style="animation-delay: 0.2s;"><a href="/schools" on:click={() => isMenuOpen = false}>Schools</a></li>
-    <li style="animation-delay: 0.3s;"><a href="/community" on:click={() => isMenuOpen = false}>Community</a></li>
-    <li style="animation-delay: 0.4s;"><a href="/about" on:click={() => isMenuOpen = false}>About</a></li>
-    <li style="animation-delay: 0.5s;"><a href="/contact" on:click={() => isMenuOpen = false}>Contact</a></li>
-  </ul>
-</nav>
+    <button class="burger-menu" class:open={isMenuOpen} on:click={() => (isMenuOpen = !isMenuOpen)} aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class:open={isMenuOpen}>
+      <ul>
+        <li style="animation-delay: 0.1s;"><a href="/" on:click={() => isMenuOpen = false}>Home</a></li>
+        <li style="animation-delay: 0.2s;"><a href="/schools" on:click={() => isMenuOpen = false}>Schools</a></li>
+        <li style="animation-delay: 0.3s;"><a href="/community" on:click={() => isMenuOpen = false}>Community</a></li>
+        <li style="animation-delay: 0.4s;"><a href="/about" on:click={() => isMenuOpen = false}>About</a></li>
+        <li style="animation-delay: 0.5s;"><a href="/contact" on:click={() => isMenuOpen = false}>Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
 </header>
 
 <style>
+
   header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +47,7 @@
   nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0;
     margin: 0;
   }

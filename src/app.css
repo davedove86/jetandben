@@ -17,9 +17,76 @@ section {
 }
 
 .btn {
-  @apply bg-[#231f1e] text-white py-4 px-6 rounded;
+  @apply bg-[#231f1e] text-white py-4 px-6 rounded cursor-pointer;
+}
+.btn:hover {
+  @apply bg-[#231f1e]/80;
 }
 
 footer {
   margin-top: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: stretch;
+  gap: 2rem;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: stretch;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 834px) {
+  .grid,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border-radius: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  width: 75px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
 }

@@ -2,27 +2,15 @@
 	import BookUsCta from '$lib/BookUsCta.svelte';
   import Hero from '$lib/Hero.svelte';
 	import ImageBanner from '$lib/ImageBanner.svelte';
+  import ContactSection from '$lib/ContactSection.svelte';
 </script>
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Home</title>
-  <meta name="description" content="Jet & Ben's website" />
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Jet & Ben Website" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffffff">
 </svelte:head>
 
-<section>
-  <div class="container">
-    <Hero
-      title="Jet & Ben Are The Durham Police Community Dogs"
-      kicker="Durham Police’s Safety Dogs, we visit educational settings and other community engagement events." />
-  </div>
-</section>
+<Hero
+  title="Jet & Ben Are The Durham Police Community Dogs"
+  kicker="Durham Police’s Safety Dogs, we visit educational settings and other community engagement events." />
 
 <section class="section">
   <div class="container">
@@ -31,21 +19,30 @@
         <img src="/school-icon.svg" alt="school hat icon" class="icon">
         <h2 class="title">Schools</h2>
         <p class="description">Jet & Ben would like to help all schools and early years providers to keep children safe.</p>
-        <a href="/about" class="learn-more">Learn More</a>
+        <div class="learn-more-wrapper">
+          <a href="/schools" class="learn-more">Learn More</a>
+          <img src="/arrow-icon.svg" alt="Arrow Icon">
+        </div>
       </div>
 
       <div class="card">
         <img src="/community-icon.svg" alt="Group of people icon" class="icon">
         <h2 class="title">Community</h2>
         <p class="description">We attend a range of organised events, visiting day centres, care homes or out of school groups.</p>
-        <a href="/community" class="learn-more">Learn More</a>
+        <div class="learn-more-wrapper">
+          <a href="/schools" class="learn-more">Learn More</a>
+          <img src="/arrow-icon.svg" alt="Arrow Icon">
+        </div>
       </div>
 
       <div class="card">
         <img src="/about-us-icon.svg" alt="Dog paw icon" class="icon">
         <h2 class="title">About Us</h2>
         <p class="description">If you would like to know more about us; who we are and what we do, then this section has it all for you.</p>
-        <a href="/about" class="learn-more">Learn More</a>
+        <div class="learn-more-wrapper">
+          <a href="/schools" class="learn-more">Learn More</a>
+          <img src="/arrow-icon.svg" alt="Arrow Icon">
+        </div>
       </div>
     </div>
   </div>
@@ -54,69 +51,151 @@
 
 <ImageBanner />
 
+<!-- What we do -->
+<section>
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2 class="title">What We Do</h2>
+        <p class="description">We have various roles within Durham Constabulary and if you would like to know more please contact us.</p>
+        <div class="what-we-do-item">
+          <img src="/school-visit-icon.svg" alt="Dog award icon" class="icon">
+          <div>
+            <h3>School Visits</h3>
+            <p>Are you a Primary School teacher or Early years provider, then we can visit you & deliver topics including Personal Safety, internet safety and people who help us.</p>
+          </div>
+        </div>
+        <div class="what-we-do-item">
+          <img src="/events-icon.svg" alt="Dog events icon" class="icon">
+          <div>
+            <h3>Community events</h3>
+            <p>Organising a local event, then consider Jet & Ben as a fun & informative addition to your event. Scouts, Brownies, Cubs or out of school groups, we’ll attend them all.</p>
+          </div>
+        </div>
+        <div class="what-we-do-item">
+          <img src="/officer-support-icon.svg" alt="two dog bones icon" class="icon">
+          <div>
+
+            <h3>Officer Support</h3>
+            <p>Police officers & staff do a demanding and sometimes dangerous job, and are frequently exposed to trauma, we come in to support and listen to the officers.</p>
+          </div>
+        </div>
+      </div>
+      <img class="what-image" src="/jetben-contact-us.jpg" alt="Jet and Ben with Claire"/>
+    </div>
+  </div>
+</section>
+
 <BookUsCta />
+
+<section class="bg-image">
+  <div class="container">
+    <h2 class="section-heading">Meet The Team</h2>
+    <p class="kicker">Click on the learn more more about our team and read their bios.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="/jet.jpg" alt="Jet" class="profile">
+        <h3 class="title">Jet</h3>
+        <p class="description">Hello my name is Jet I am fun and friendly Black Labrador.</p>
+        <div class="learn-more-wrapper">
+          <a href="/jet" class="learn-more">Learn More</a>
+          <img src="/arrow-icon.svg" alt="Arrow Icon">
+        </div>
+      </div>
+      <div class="card">
+        <img src="/ben.jpg" alt="Ben" class="profile">
+        <h3 class="title">Ben</h3>
+        <p class="description">Hello my name is Ben I am cute and cuddly Golden Labrador.</p>
+        <div class="learn-more-wrapper">
+          <a href="/ben" class="learn-more">Learn More</a>
+          <img src="/arrow-icon.svg" alt="Arrow Icon">
+        </div>
+      </div>
+      <div class="card">
+        <img src="/claire.jpg" alt="Claire" class="profile">
+        <h3 class="title">Claire</h3>
+        <p class="description">Hello my name is Claire and I am Jet & Ben’s favourite two legged human.</p>
+        <div class="learn-more-wrapper">
+          <a href="/claire" class="learn-more">Learn More</a>
+          <img src="/arrow-icon.svg" alt="Arrow Icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ContactSection />
 
 <style>
   /* General Section Styles */
-.section {
+.bg-image {
   background-color: #f2f2f2;
+  /* padding: 4rem 0; */
+  background-image: url('/paw-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
   padding: 4rem 0;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* Grid Layout */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.what-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+.what-we-do-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.what-we-do-item h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 834px) {
+  .what-we-do-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-/* Card Styles */
-.card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 2rem;
-}
-
-.icon {
-  width: 75px;
-  margin-bottom: 1.5rem;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.description {
-  font-size: 1rem;
-  color: #4a4a4a;
-  margin-bottom: 1.5rem;
-}
-
 /* Learn More Link */
+
+.learn-more-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
 .learn-more {
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .learn-more:hover {
-  transform: scale(1.2); /* Larger scale effect */
   color: #1a4f8b; /* Darker blue color */
 }
 
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.kicker {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
 </style>

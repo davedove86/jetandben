@@ -1,22 +1,186 @@
 <script>
 	import Hero from '$lib/Hero.svelte';
+  import BookUsCta from '$lib/BookUsCta.svelte';
+  import ContactUsCta from '$lib/ContactUsCta.svelte';
+
+
+  import { fade } from 'svelte/transition';
+  import { onMount } from 'svelte';
+
+  let testimonials = [
+    {
+      quote: "Jet & Ben delivered an engaging session that our students absolutely loved.",
+      name: "Mrs. Thompson",
+      school: "Durham Primary School"
+    },
+    {
+      quote: "The team helped children understand safety in such a fun and memorable way!",
+      name: "Mr. Davies",
+      school: "Greenfields Academy"
+    },
+    {
+      quote: "A fantastic initiative – highly recommended to any school!",
+      name: "Ms. Patel",
+      school: "Elm Tree School"
+    }
+  ];
+
+  let current = 0;
+  let interval;
+
+  onMount(() => {
+    interval = setInterval(() => {
+      current = (current + 1) % testimonials.length;
+    }, 5000);
+
+    return () => clearInterval(interval);
+  });
 </script>
 
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Schools</title>
-  <meta name="description" content="Jet & Ben's website" />
-  <link rel="icon" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffffff">
 </svelte:head>
 
-<section>
-  <div class="container">
+  <Hero
+    title="Schools"
+    kicker="Jet & Ben would like to help all schools and early years providers within County Durham and Darlington to educate children especially when it comes to their safety. Find out more below about the lessons we can provide to you."
+    image="/jet-puppy.jpg"
+    imageAlt="Jet as a puppy"/>
 
-    <Hero
-      title="Schools"
-      kicker="Jet & Ben would like to help all schools and early years providers within County Durham and Darlington to educate children especially when it comes to their safety. Find out more below about the lessons we can provide to you." />
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <img src="/presentations-icon.svg" alt="school hat icon" class="icon">
+        <h2 class="title">Presentations</h2>
+        <p class="description">We deliver a range of presentations for different ages and abilities including, Personal Safety, Internet Safety and People Who Help Us.</p>
+      </div>
+
+      <div class="card">
+        <img src="/meet-icon.svg" alt="Group of people icon" class="icon">
+        <h2 class="title">Meet & Greet</h2>
+        <p class="description">Are you having a summer fair, charity event or anything within school where a cuddly cute dog would make a nice addition then why not invite us along.</p>
+      </div>
+
+      <div class="card">
+        <img src="/competitions-icon.svg" alt="Dog paw icon" class="icon">
+        <h2 class="title">Competitions</h2>
+        <p class="description">Teachers watch this space for regular competitions that your school can get involved with and hopefully win some great prizes.</p>
+      </div>
+    </div>
   </div>
 </section>
+
+<BookUsCta />
+
+<div class="testimonial-section">
+  <div class="image-wrapper">
+    <img src="/jet-puppy.jpg" alt="Jet & Ben in a school visit" />
+  </div>
+
+  <div class="testimonial-slider">
+    {#each testimonials as t, i}
+      {#if i === current}
+        <div transition:fade={{ duration: 500 }} class="testimonial">
+          <p class="quote">“{t.quote}”</p>
+          <p class="author">{t.name}</p>
+          <p class="school">{t.school}</p>
+        </div>
+      {/if}
+    {/each}
+
+    <div class="dots">
+      {#each testimonials as _, i}
+        <button
+          type="button"
+          class="dot {i === current ? 'active' : ''}"
+          aria-label="Select testimonial {i + 1}"
+          on:click={() => current = i}
+        ></button>
+      {/each}
+    </div>
+    </div>
+  </div>
+
+
+<ContactUsCta />
+
+<style>
+.testimonial-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-slider {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.author {
+  font-weight: bold;
+  color: #555;
+}
+
+.school {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.dots {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+  @media (max-width: 768px) {
+    .testimonial-section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

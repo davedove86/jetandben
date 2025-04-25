@@ -1,5 +1,7 @@
 <script>
-	import Hero from '$lib/Hero.svelte';
+	import BookUsCta from '$lib/BookUsCta.svelte';
+	import ContactUsCta from '$lib/ContactUsCta.svelte';
+import Hero from '$lib/Hero.svelte';
 </script>
 
 <svelte:head>
@@ -12,10 +14,9 @@
   <meta name="theme-color" content="#ffffff">
 </svelte:head>
 
-<section>
-  <div class="container">
-    <Hero
-      title="Community"
-      kicker="Jet & Ben maintain many links within the local community, attending organised events, visiting day centres, care homes or out of school groups. If you run a local community group find out more here." />
-  </div>
-</section>
+
+<Hero
+  title="Community"
+  kicker="Jet & Ben maintain many links within the local community, attending organised events, visiting day centres, care homes or out of school groups. If you run a local community group find out more here."
+  image="/community-hero.jpg"
+  imageAlt='Police staff outside a Police Station' />

@@ -25,6 +25,8 @@
   .accordion {
     margin: 3rem auto;
     max-width: 936px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 3rem;
   }
 
   button.header {
@@ -35,10 +37,6 @@
     font-size: 1.25rem;
     font-weight: bold;
     cursor: pointer; /* Ensures the pointer cursor applies to the entire header */
-  }
-
-  div.header .text {
-    flex: 1;
   }
 
   div.details {
