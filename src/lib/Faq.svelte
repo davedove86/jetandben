@@ -43,4 +43,8 @@
     padding: 1rem 0;
   }
 
+  .text {
+    text-align: left;
+  }
+
 </style>

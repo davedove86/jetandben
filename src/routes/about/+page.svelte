@@ -44,6 +44,10 @@
     margin-bottom: 2rem;
     text-align: center;
   }
+
+  span {
+    text-align: left;
+  }
 </style>
 
 
