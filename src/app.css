@@ -13,7 +13,7 @@
 }
 
 section {
-  padding: 3rem 0;
+  padding: 6rem 0;
 }
 
 .btn {
@@ -61,6 +61,38 @@ footer {
   .grid-2 {
     grid-template-columns: 1fr;
   }
+
+  .grid-2.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.what-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.what-we-do-item {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.what-we-do-item h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 834px) {
+  .what-we-do-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .profile {
@@ -89,4 +121,38 @@ footer {
   font-size: 1rem;
   color: #4a4a4a;
   margin-bottom: 1.5rem;
+}
+
+.learn-more-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.learn-more {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #1a4f8b;
+  /* Darker blue color */
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.kicker {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
 }

@@ -3,6 +3,7 @@
   import Hero from '$lib/Hero.svelte';
 	import ImageBanner from '$lib/ImageBanner.svelte';
   import ContactSection from '$lib/ContactSection.svelte';
+	import AboutCards from '$lib/AboutCards.svelte';
 </script>
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Home</title>
@@ -88,55 +89,12 @@
 
 <BookUsCta />
 
-<section class="bg-image">
-  <div class="container">
-    <h2 class="section-heading">Meet The Team</h2>
-    <p class="kicker">Click on the learn more more about our team and read their bios.</p>
-    <div class="grid">
-      <div class="card">
-        <img src="/jet.jpg" alt="Jet" class="profile">
-        <h3 class="title">Jet</h3>
-        <p class="description">Hello my name is Jet I am fun and friendly Black Labrador.</p>
-        <div class="learn-more-wrapper">
-          <a href="/jet" class="learn-more">Learn More</a>
-          <img src="/arrow-icon.svg" alt="Arrow Icon">
-        </div>
-      </div>
-      <div class="card">
-        <img src="/ben.jpg" alt="Ben" class="profile">
-        <h3 class="title">Ben</h3>
-        <p class="description">Hello my name is Ben I am cute and cuddly Golden Labrador.</p>
-        <div class="learn-more-wrapper">
-          <a href="/ben" class="learn-more">Learn More</a>
-          <img src="/arrow-icon.svg" alt="Arrow Icon">
-        </div>
-      </div>
-      <div class="card">
-        <img src="/claire.jpg" alt="Claire" class="profile">
-        <h3 class="title">Claire</h3>
-        <p class="description">Hello my name is Claire and I am Jet & Ben’s favourite two legged human.</p>
-        <div class="learn-more-wrapper">
-          <a href="/claire" class="learn-more">Learn More</a>
-          <img src="/arrow-icon.svg" alt="Arrow Icon">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<AboutCards />
 
 <ContactSection />
 
 <style>
-  /* General Section Styles */
-.bg-image {
-  background-color: #f2f2f2;
-  /* padding: 4rem 0; */
-  background-image: url('/paw-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;
-  padding: 4rem 0;
-}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -167,35 +125,6 @@
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-/* Learn More Link */
-
-.learn-more-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: auto;
-}
-.learn-more {
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.learn-more:hover {
-  color: #1a4f8b; /* Darker blue color */
-}
-
-.section-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.kicker {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 </style>
