@@ -27,28 +27,50 @@
       <div class="card contact-form">
         <img src="contact-paws.svg" alt="Tow dog paws icon" class="paws-icon">
         <h2>Send Us a Message</h2>
-        <form method="POST"
+        <form
+        name="contact"
+        method="POST"
         data-netlify-recaptcha="true"
-        data-netlify="true">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Email" required />
-          </div>
-           <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="phone" id="phone" name="phone" placeholder="Phone" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Type Your Message" required></textarea>
-          </div>
-          <div data-netlify-recaptcha="true" />
-          <button class="btn" type="submit">Submit</button>
-        </form>
+        data-netlify="true"
+      >
+        <div>
+          <label for="text">Name</label>
+          <input
+            id="text"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <!-- TODO add a default subject -->
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" type="Phone" name="phone" placeholder="Phone" />
+        </div>
+        <div>
+          <label for="textarea">Message</label>
+          <textarea
+            id="textarea"
+            type="textarea"
+            name="message"
+            placeholder="Message"
+            required
+          ></textarea>
+        </div>
+        <div data-netlify-recaptcha="true" />
+        <button class="btn" type="submit">Submit Form</button>
+      </form>
       </div>
     </div>
   </div>
