@@ -33,6 +33,7 @@
         data-netlify-recaptcha="true"
         data-netlify="true"
       >
+        <input type="hidden" name="contact" value="contact" />
         <div>
           <label for="text">Name</label>
           <input
