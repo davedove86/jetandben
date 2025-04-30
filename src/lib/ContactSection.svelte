@@ -1,3 +1,7 @@
+<script>
+  export const prerender = true;
+</script>
+
 <section class="contact-section">
   <div class="container">
     <div class="grid">
@@ -27,8 +31,7 @@
       <div class="card contact-form">
         <img src="contact-paws.svg" alt="Tow dog paws icon" class="paws-icon">
         <h2>Send Us a Message</h2>
-        <form name="contact" method="POST" data-netlify="true"
-      >
+        <form name="contact" method="POST" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label for="text">Name</label>
