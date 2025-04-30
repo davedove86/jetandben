@@ -27,7 +27,7 @@
       <div class="card contact-form">
         <img src="contact-paws.svg" alt="Tow dog paws icon" class="paws-icon">
         <h2>Send Us a Message</h2>
-        <form>
+        <form name="contact" netlify>
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Name" required />
