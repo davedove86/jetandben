@@ -27,13 +27,9 @@
       <div class="card contact-form">
         <img src="contact-paws.svg" alt="Tow dog paws icon" class="paws-icon">
         <h2>Send Us a Message</h2>
-        <form
-        name="contact"
-        method="POST"
-        data-netlify-recaptcha="true"
-        data-netlify="true"
+        <form name="contact" method="POST" data-netlify="true"
       >
-        <input type="hidden" name="contact" value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <div>
           <label for="text">Name</label>
           <input
