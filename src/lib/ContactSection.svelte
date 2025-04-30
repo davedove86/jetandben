@@ -27,49 +27,15 @@
       <div class="card contact-form">
         <img src="contact-paws.svg" alt="Tow dog paws icon" class="paws-icon">
         <h2>Send Us a Message</h2>
-        <form
-        name="contact"
-        method="POST"
-        data-netlify-recaptcha="true"
-        data-netlify="true"
-      >
-        <div>
-          <label for="text">Name</label>
-          <input
-            id="text"
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-          />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <!-- TODO add a default subject -->
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input id="phone" type="Phone" name="phone" placeholder="Phone" />
-        </div>
-        <div>
-          <label for="textarea">Message</label>
-          <textarea
-            id="textarea"
-            type="textarea"
-            name="message"
-            placeholder="Message"
-            required
-          ></textarea>
-        </div>
-        <div data-netlify-recaptcha="true" />
-        <button class="btn" type="submit">Submit Form</button>
+       <form name="netlify-form-example" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+        <input type="hidden" name="form-name" value="netlify-form-example" />
+        <label for="name">Name</label>
+        <input name="name" id="name" required placeholder="Name" type="text" />
+        <label for="email">Email</label>
+        <input name="email" id="email" required placeholder="Email" type="email" />
+        <label for="message">Message</label>
+        <input name="message" id="message" required placeholder="Message" type="text" />
+        <input type="submit" value="Submit" />
       </form>
       </div>
     </div>
