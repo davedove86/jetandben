@@ -33,7 +33,7 @@
         <h2>Send Us a Message</h2>
         <form name="contact" method="POST" netlify>
         <input type="hidden" name="form-name" value="contact" />
-        <div>
+        <div class="form-group">
           <label for="text">Name</label>
           <input
             id="text"
@@ -43,8 +43,8 @@
             required
           />
         </div>
-        <div>
-          <label for="email">Email</label>
+        <div class="form-group">
+          <label for="email">Email Address</label>
           <!-- TODO add a default subject -->
           <input
             id="email"
@@ -54,17 +54,18 @@
             required
           />
         </div>
-        <div>
+        <div class="form-group">
           <label for="phone">Phone</label>
           <input id="phone" type="Phone" name="phone" placeholder="Phone" />
         </div>
-        <div>
+        <div class="form-group">
           <label for="textarea">Message</label>
           <textarea
             id="textarea"
             type="textarea"
             name="message"
-            placeholder="Message"
+            placeholder="Type message here"
+            rows="5"
             required
           ></textarea>
         </div>

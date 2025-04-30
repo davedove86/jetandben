@@ -86,6 +86,108 @@
   </div>
 </section>
 
+<section id='banner-container'>
+			<div class='photobanner'>
+        <div class="logo-orange first">
+          <img
+            src='/pawsup.svg'
+            alt='Paws Up Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/ok-9.svg'
+            alt='OK9 Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/pcc-logo.svg'
+            alt='Durham PCC Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/dcc-logo.svg'
+            alt='Durham Council Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/dc-logo.svg'
+            alt='`Durham Police` Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/dbc-logo.svg'
+            alt='Darlington Council Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/daac.svg'
+            alt='DAAC Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/ceop.svg'
+            alt='CEOP Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/pawsup.svg'
+            alt='Paws Up Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/ok-9.svg'
+            alt='OK9 Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/pcc-logo.svg'
+            alt='Durham PCC Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/dcc-logo.svg'
+            alt='Durham Council Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/dc-logo.svg'
+            alt='`Durham Police` Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/dbc-logo.svg'
+            alt='Darlington Council Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/daac.svg'
+            alt='DAAC Logo'
+          />
+        </div>
+        <div class="logo-orange">
+          <img
+            src='/ceop.svg'
+            alt='CEOP Logo'
+          />
+        </div>
+			</div>
+		</section>
+
+
 
 <section>
   <div class="container">
@@ -130,6 +232,88 @@
   a {
     text-decoration: underline;
   }
+
+#banner-container {
+	width: 100%;
+	overflow: hidden;
+}
+
+#banner-container .photobanner {
+	height: auto;
+	width: 3350px;
+	display: flex;
+	gap: 0.5rem;
+}
+
+#banner-container .photobanner img {
+	max-width: 400px;
+	max-height: 320px;
+}
+
+/*keyframe animations*/
+.first {
+	-webkit-animation: bannermove 30s linear infinite;
+	-moz-animation: bannermove 30s linear infinite;
+	-ms-animation: bannermove 30s linear infinite;
+	-o-animation: bannermove 30s linear infinite;
+	animation: bannermove 30s linear infinite;
+}
+
+@keyframes bannermove {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-moz-keyframes bannermove {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-webkit-keyframes bannermove {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-ms-keyframes bannermove {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-o-keyframes bannermove {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+.logo-orange {
+  background-color: #f2c165;
+  border: 6px solid #231F1E;
+  padding: 1rem 6rem;
+  width: 400px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 
 
