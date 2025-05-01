@@ -2,8 +2,8 @@
 	import BookUsCta from '$lib/BookUsCta.svelte';
   import Hero from '$lib/Hero.svelte';
 	import ImageBanner from '$lib/ImageBanner.svelte';
-  import ContactSection from '$lib/ContactSection.svelte';
 	import AboutCards from '$lib/AboutCards.svelte';
+	import ContactUsCta from '$lib/ContactUsCta.svelte';
 </script>
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Home</title>
@@ -91,7 +91,7 @@
 
 <AboutCards />
 
-<ContactSection />
+<ContactUsCta />
 
 <style>
 

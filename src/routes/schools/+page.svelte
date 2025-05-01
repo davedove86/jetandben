@@ -2,27 +2,34 @@
 	import Hero from '$lib/Hero.svelte';
   import BookUsCta from '$lib/BookUsCta.svelte';
   import ContactUsCta from '$lib/ContactUsCta.svelte';
+  import schools from '$lib/schools.js'; // Assuming this file exports an array of school objects
 
 
   import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
 
+
   let testimonials = [
     {
-      quote: "Jet & Ben delivered an engaging session that our students absolutely loved.",
-      name: "Mrs. Thompson",
-      school: "Durham Primary School"
+      quote: "Thank you to Jet & Ben for coming to see our children at Parkside Childcare, they thoroughly enjoyed your visit and we would definitely use you again in the future.",
+      name: "Deputy Manager",
+      school: "Parkside Childcare, Darlington"
     },
     {
-      quote: "The team helped children understand safety in such a fun and memorable way!",
-      name: "Mr. Davies",
-      school: "Greenfields Academy"
+      quote: "We loved watching the dogs in action hunting for their tennis ball. It was great fun. Thank you!",
+      name: "Teacher",
+      school: "Reid Street Primary School, Darlington"
     },
     {
-      quote: "A fantastic initiative – highly recommended to any school!",
-      name: "Ms. Patel",
-      school: "Elm Tree School"
-    }
+      quote: "This was a great way to get the children thinking about online safety it is good for them to hear the message from a police officer and not just the teacher.",
+      name: "Headteacher",
+      school: "St Andrew’s Primary School, Bishop Auckland"
+    },
+    {
+      quote: "It was fantastic to welcome Jet and Ben and their human friends into school. The session was friendly, engaging and informative. It covered all aspects of safety ranging from road safety to keeping yourself safe whilst online. Meeting and stroking Jet and Ben was very exciting for the children and helped to build their confidence around dogs. We are looking forward to another visit later in the year.",
+      name: "Headteacher",
+      school: "Stanhope Barrington RC Primary School"
+    },
   ];
 
   let current = 0;
@@ -71,8 +78,6 @@
   </div>
 </section>
 
-<BookUsCta />
-
 <div class="testimonial-section">
   <div class="image-wrapper">
     <img src="/jet-puppy.jpg" alt="Jet & Ben in a school visit" />
@@ -102,6 +107,21 @@
     </div>
   </div>
 
+<section>
+  <div class="container">
+    <div class="grid">
+      {#each schools as school}
+        <div class="school-card">
+          <h3 class="title">{school.name}</h3>
+          <p class="description">{school.description}</p>
+          <div class="learn-more-wrapper">
+            <a href={school.slug} target="_blank">Book Here Now</a>
+            <img src="/arrow-icon.svg" alt="Arrow Icon">
+          </div>
+        </div>
+      {/each}
+  </div>
+</section>
 
 <ContactUsCta />
 
@@ -141,6 +161,10 @@
   text-align: center;
 }
 
+.testimonial {
+  text-align: left;
+}
+
 .quote {
   font-size: 1.5rem;
   font-style: italic;
@@ -156,6 +180,22 @@
 .school {
   font-size: 0.95rem;
   color: #888;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.school-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2c165;
+  border: 6px solid #231F1E;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .dots {
