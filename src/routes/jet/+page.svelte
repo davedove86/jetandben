@@ -5,12 +5,7 @@
 
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Jet</title>
-  <meta name="description" content="Jet & Ben's website" />
-  <link rel="icon" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="I am a 2-year-old Black Labrador, I started out my life with Durham Police as a tiny puppy, I originally started out my time in the police training to be a search dog, but because I had such good skills working with people I was transferred to work with my handler Claire." />
 </svelte:head>
 
 
