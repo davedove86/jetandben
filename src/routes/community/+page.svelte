@@ -6,7 +6,7 @@
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Community</title>
   <meta name="description" content="Jet & Ben maintain many links within the local community, attending organised events, visiting day centres, care homes, or out of school groups. If you run a local community group find out more here." />
-  <meta itemprop="image" content="/claire.jpg" />
+  <meta itemprop="image" content="../claire.jpg" />
 </svelte:head>
 
 

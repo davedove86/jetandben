@@ -6,7 +6,7 @@
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Claire</title>
   <meta name="description" content="I am the Community Engagement dog Handler for Jet and Ben within Durham Constabulary." />
-  <meta itemprop="image" content="/claire.jpg" />
+  <meta itemprop="image" content="../claire.jpg" />
 </svelte:head>
 
 

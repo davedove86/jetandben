@@ -9,7 +9,7 @@
 <svelte:head>
   <title>Jet and Ben | Durham Constabulary | About Us</title>
   <meta name="description" content="If you would like to know more about us; who we are and what we do, then this section has all the information you will need, if you love cute dogs, this is the section for you." />
-  <meta itemprop="image" content="/claire.jpg" />
+  <meta itemprop="image" content="../claire.jpg" />
 </svelte:head>
 
   <Hero

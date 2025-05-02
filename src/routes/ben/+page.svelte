@@ -6,7 +6,7 @@
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Ben</title>
   <meta name="description" content="I am a Golden Labrador, I started out my life with Durham Police as a tiny puppy, this is me with my litter brothers and sisters and just before I began my life with my police handler Claire." />
-  <meta itemprop="image" content="/claire.jpg" />
+  <meta itemprop="image" content="../claire.jpg" />
 </svelte:head>
 
 
