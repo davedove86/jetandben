@@ -7,6 +7,14 @@
     <meta name="author" content="Durham Constabulary" />
     <meta name="copyright" content="Durham Constabulary" />
     <meta itemprop="image" content="/claire.jpg" />
+    <meta property="og:title" content="Jet & Ben Website" />
+    <meta property="og:description" content="Jet & Ben are the Durham Constabulary Safety Dogs, they visit educational settings and other community engagement events." />
+    <meta property="og:image" content="/claire.jpg" />
+    <meta property="og:url" content="https://jetandben.co.uk" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jet & Ben Website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="google-site-verification" content="yaoZo6izV_NA32dFuExKu4VM1PvZvX4Hycz9tROHzns" />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -18,6 +26,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CL5Y7KMHMN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CL5Y7KMHMN');
+  </script>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
