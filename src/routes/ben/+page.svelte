@@ -5,12 +5,7 @@
 
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Ben</title>
-  <meta name="description" content="Jet & Ben's website" />
-  <link rel="icon" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="I am a Golden Labrador, I started out my life with Durham Police as a tiny puppy, this is me with my litter brothers and sisters and just before I began my life with my police handler Claire." />
 </svelte:head>
 
 

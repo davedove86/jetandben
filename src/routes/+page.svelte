@@ -7,6 +7,7 @@
 </script>
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Home</title>
+  <meta name="description" content="Jet & Ben are the Durham Police Community Dogs. We visit educational settings and other community engagement events." />
 </svelte:head>
 
 <Hero
