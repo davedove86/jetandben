@@ -69,7 +69,7 @@
             required
           ></textarea>
         </div>
-        <div data-netlify-recaptcha="true" />
+        <div class="mb-2" data-netlify-recaptcha="true" />
         <button class="btn" type="submit">Submit Form</button>
       </form>
       </div>

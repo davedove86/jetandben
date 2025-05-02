@@ -31,7 +31,7 @@
         <h2 class="title">Community</h2>
         <p class="description">We attend a range of organised events, visiting day centres, care homes or out of school groups.</p>
         <div class="learn-more-wrapper">
-          <a href="/schools" class="learn-more">Learn More</a>
+          <a href="/community" class="learn-more">Learn More</a>
           <img src="/arrow-icon.svg" alt="Arrow Icon">
         </div>
       </div>
@@ -41,7 +41,7 @@
         <h2 class="title">About Us</h2>
         <p class="description">If you would like to know more about us; who we are and what we do, then this section has it all for you.</p>
         <div class="learn-more-wrapper">
-          <a href="/schools" class="learn-more">Learn More</a>
+          <a href="/about" class="learn-more">Learn More</a>
           <img src="/arrow-icon.svg" alt="Arrow Icon">
         </div>
       </div>
