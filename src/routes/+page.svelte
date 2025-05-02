@@ -8,6 +8,7 @@
 <svelte:head>
   <title>Jet & Ben | Durham Constabulary | Home</title>
   <meta name="description" content="Jet & Ben are the Durham Police Community Dogs. We visit educational settings and other community engagement events." />
+  <meta itemprop="image" content="/claire.jpg" />
 </svelte:head>
 
 <Hero
