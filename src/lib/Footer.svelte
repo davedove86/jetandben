@@ -2,7 +2,7 @@
   <div class="container">
     <div class="grid">
       <div>
-        <img src="/logo-white.svg" alt="Jet & Ben Logo White" class="logo" />
+        <img src="/logo-white.svg" alt="Jet & Ben Logo White" />
       </div>
       <div>
         <h3 class="section-title">Navigation</h3>
@@ -53,10 +53,10 @@
   gap: 2rem;
 }
 
-.logo {
+/* .logo {
   width: 5rem;
   margin-bottom: 1rem;
-}
+} */
 
 .section-title {
   font-size: 1.125rem;
